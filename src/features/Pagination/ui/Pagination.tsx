@@ -14,7 +14,7 @@ interface IPaginationProps {
     quantityOfPage: number;
 }
 
-export const PaginationClient = ({ className, quantityOfPage }: IPaginationProps) => {
+export const PaginationClient = ({ quantityOfPage }: IPaginationProps) => {
     // * Hooks
     const router = useRouter();
     const pathname = usePathname();
@@ -46,6 +46,7 @@ export const PaginationClient = ({ className, quantityOfPage }: IPaginationProps
                         color="secondary"
                         page={selectedPage}
                         onChange={onChangeSelectedNumber}
+                        sx={{ mt: 2, mb: 2 }}
             />
         </section>
     );

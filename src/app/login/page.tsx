@@ -2,8 +2,7 @@
 import { Suspense } from "react";
 
 // ? Import Widgets
-
-// ? Import Slice
+import { LoginForm } from "@/widgets/LoginForm";
 
 // * Types
 interface ISearchParams {
@@ -17,19 +16,14 @@ interface IPageProps extends ISearchParams {
   className?: string;
 }
 
-export default async function Page({searchParams}: IPageProps) {
-    // * Variables
-
-    // * Fetches
-
-    // * Models
-
-    // * Props To
+export default async function Page(props: IPageProps) {
 
     // * Render
     return (
         <Suspense fallback={<div>Loading...</div>}>
-            <main>auth</main>
+            <main>
+                <LoginForm />
+            </main>
         </Suspense>
     );
 };

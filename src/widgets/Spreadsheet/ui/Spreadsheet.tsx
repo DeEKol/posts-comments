@@ -1,21 +1,17 @@
-// ? Import Libraries
+// ? Import App
+import { TPost } from "@/app/posts";
+import { TComments } from "@/app/posts";
 
 // ? Import Features
 import { Pagination } from "@/features/Pagination";
 import { Table } from "@/features/Table";
 
-// ? Import App
-import { TPost } from "@/app/posts";
-import { TComments } from "@/app/posts";
-
-// ? Import Widgets
-import { TColumns } from "@/widgets/Spreadsheet";
-
 // ? Import Slice
 import cls from "./styles.module.scss";
+import { TColumns } from "../types";
 
 // ? Types
-interface IPostsProps {
+interface ISpreadsheetProps {
     className?: string;
     title: string;
     currentPage: number;
@@ -24,7 +20,7 @@ interface IPostsProps {
     rows: TPost[] | TComments[];
 }
 
-export const Spreadsheet = (props: IPostsProps) => {
+export const Spreadsheet = (props: ISpreadsheetProps) => {
     // * Props From
     const { title, currentPage, rowsPerPage, columns, rows } = props;
 
