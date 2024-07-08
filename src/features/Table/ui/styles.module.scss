@@ -1,0 +1,15 @@
+.link {
+    color: blue;
+
+    border-radius: 10px;
+    border: 1px blue solid;
+    padding: 8px;
+
+    transition: 0.3s;
+
+    &:hover {
+        color: #9c27b0;
+        background-color: rgba(156, 39, 176, 0.12);
+        border: 1px rgba(156, 39, 176, 0.5) solid;
+    }
+}

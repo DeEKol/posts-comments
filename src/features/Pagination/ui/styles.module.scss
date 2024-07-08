@@ -1,0 +1,12 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+    padding: 10px;
+
+    &__selected-number {
+        width: 70px;
+    }
+}

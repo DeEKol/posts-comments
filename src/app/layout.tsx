@@ -1,8 +1,10 @@
+// ? Import Libraries
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// ? Import Slice
+import "./styles/globals.css";
+import "./styles/normalize.css";
+import cls from "./layout.module.scss";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cls.layout}>
+          <div>
+            header
+          </div>
+          {children}
+      <footer>footer</footer>
+      </body>
     </html>
   );
 }
